@@ -1,0 +1,124 @@
+================================================================================
+  ShowMMR 2026
+  END USER LICENSE AGREEMENT
+
+  Copyright (c) 2026  t.me/feereeks.  All rights reserved.
+================================================================================
+
+  Read this before installing. Installing or using ShowMMR 2026 ("the
+  Software") means you accept every term below. If you do not accept them,
+  delete the files and do not install.
+
+
+  1. LICENSE GRANTED
+  ----------------------------------------------------------------------------
+  You are granted a personal, non-exclusive, non-transferable, revocable
+  license to install and use the Software on computers you own or control,
+  for your own private, non-commercial use.
+
+  That is the whole of the grant. Any use not written here is not permitted.
+
+
+  2. WHAT YOU MAY NOT DO
+  ----------------------------------------------------------------------------
+  You may not:
+
+    a) copy, publish, upload, mirror, share, lend, rent, sell, sublicense or
+       otherwise distribute the Software or any part of it, in original or
+       modified form, by any means, including file hosts, forums, chats,
+       torrents, game-mod sites and app stores;
+
+    b) bundle the Software with any other product, pack, cheat, launcher or
+       service, paid or free;
+
+    c) modify, adapt, translate, decompile, disassemble or reverse engineer
+       the Software, or create derivative works from it, except and only to
+       the extent that applicable law expressly permits this despite this
+       restriction;
+
+    d) remove, hide, obscure, replace or alter the attribution mark
+       "t.me/feereeks" wherever it appears, this agreement, or any copyright
+       or authorship notice;
+
+    e) present the Software, or anything built from it, as your own work.
+
+  If you want other people to have the Software, send them to t.me/feereeks.
+  That link is the only permitted way to pass it on.
+
+
+  3. OWNERSHIP
+  ----------------------------------------------------------------------------
+  The Software is licensed, not sold. All rights, title and interest in it,
+  other than the third-party components named in section 4, stay with the
+  copyright holder.
+
+
+  4. THIRD-PARTY COMPONENTS
+  ----------------------------------------------------------------------------
+  Parts of the Software are derived from ShowMMR by AveYo
+  (github.com/AveYo/ShowMMR), published under the MIT License. Those parts
+  remain under the MIT License, and nothing in this agreement removes or
+  limits the rights the MIT License gives you in respect of them. The MIT
+  permission notice is reproduced here as that license requires:
+
+      Permission is hereby granted, free of charge, to any person obtaining a
+      copy of this software and associated documentation files (the
+      "Software"), to deal in the Software without restriction, including
+      without limitation the rights to use, copy, modify, merge, publish,
+      distribute, sublicense, and/or sell copies of the Software, and to
+      permit persons to whom the Software is furnished to do so, subject to
+      the following conditions:
+
+      The above copyright notice and this permission notice shall be included
+      in all copies or substantial portions of the Software.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+      OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+      IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+      CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+      TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+      SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+  The restrictions in section 2 apply to the work as a whole and to every
+  part of it that is not covered by the MIT License above.
+
+
+  5. NO WARRANTY
+  ----------------------------------------------------------------------------
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED. THE COPYRIGHT HOLDER DOES NOT WARRANT THAT IT WILL WORK, KEEP
+  WORKING, BE FREE OF DEFECTS, OR BE COMPATIBLE WITH ANY VERSION OF DOTA 2.
+
+
+  6. LIMITATION OF LIABILITY
+  ----------------------------------------------------------------------------
+  TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDER IS NOT LIABLE
+  FOR ANY DAMAGE, DATA LOSS, LOST TIME, LOST GAME PROGRESS, ACCOUNT ACTION OR
+  OTHER LOSS ARISING FROM THE USE OR INABILITY TO USE THE SOFTWARE.
+
+
+  7. DOTA 2 AND VALVE
+  ----------------------------------------------------------------------------
+  This is an unofficial, client-side interface modification. It is not
+  affiliated with, endorsed by or supported by Valve Corporation. Dota 2 and
+  Valve are trademarks of Valve Corporation.
+
+  Modifying the game client is not supported by Valve. A game update may
+  break the Software at any time, and how Valve treats client modifications
+  is entirely their decision. You install and use it at your own risk.
+
+
+  8. TERMINATION
+  ----------------------------------------------------------------------------
+  This license ends automatically if you break any term of it. On termination
+  you must delete every copy of the Software you hold.
+
+
+  9. UPDATES
+  ----------------------------------------------------------------------------
+  Dota patches break client modifications. New builds are posted at:
+
+      t.me/feereeks
+
+================================================================================
