@@ -4,9 +4,9 @@
 
 ```
 HERO PLAYED        RESULT          DATE / TIME          DURATION   TYPE
-[icon] t.me/feereeks   8666 (+16)   10-8-2026  16:37     56:19     Ranked
-[icon] t.me/feereeks   8650 (-20)   10-8-2026  12:55     34:48     Ranked
-[icon] t.me/feereeks   8670 (+21)   10-8-2026  11:19     47:43     Ranked
+[icon] t.me/feereeks   1489 (+40)   26-8-2026  17:37     56:19     Ranked
+[icon] t.me/feereeks   1449 (-26)   26-8-2026  16:55     34:48     Ranked
+[icon] t.me/feereeks   1475 (+40)   25-8-2026  21:19     47:43     Ranked
 ```
 
 Valve took the numbers out. This puts them back — the rating after every ranked
@@ -24,9 +24,9 @@ from the ground up for the current client.
 
 | | |
 |---|---|
-| **Numbers in the match list** | `6666 (+66)` in the RESULT column, for every ranked game |
+| **Numbers in the match list** | `1489 (+40)` in the RESULT column, for every ranked game |
 | **Live** | the number appears the moment you leave the post-game screen — no client restart |
-| **Day strip** | `TODAY +10 (2)   YESTERDAY +10 (4)   MONDAY -30 (4)` above your profile |
+| **Day strip** | `TODAY +14 (2)   YESTERDAY +90 (4)   MONDAY -30 (3)` above your profile |
 | **Week / month totals** | hover the strip: this week, last week, the calendar month, all time |
 | **Your colours** | win, loss, plain text, and Dota's own MMR block — presets or your own hex |
 | **Several accounts** | kept apart automatically, no setup |
@@ -90,13 +90,16 @@ Dota usually sits under `Program Files`, where writing needs them.
 
 `Settings.bat`:
 
-- **win / loss numbers** — colour of `+25` and `-25`
+- **win / loss numbers** — colour of `+40` and `-26`
 - **plain text** — colour of the day names and game counts
 - **MMR block** — recolours Dota's own rating, caption and Rank Confidence bar
 - **day strip** — on or off
 
 Eight presets or any hex you like. A colour you set replaces the old one
 everywhere.
+
+Out of the box: **green** wins, **red** losses, **white** text, and Dota's own
+gold left alone on the MMR block.
 
 ---
 

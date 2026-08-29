@@ -380,7 +380,22 @@ function Sync-Once($dota, $modDirs) {
         $parts.Add(("{0}:[{1},{2}]" -f $keys[$i], $entries[$keys[$i]], $chg))
     }
 
-    $body = @('showmmr', '{', ("`tdata`t`t`"" + ($parts -join ',') + "`""), '}')
+    # ONE KEY PER MATCH, not one long string.
+    #
+    # The whole history used to go into a single "data" value. A KeyValues value
+    # is capped at about a kilobyte, and at ~26 characters per match that ceiling
+    # arrives around the fortieth game: the value gets cut mid-entry and every
+    # match past the cut silently disappears. One line each has no such ceiling.
+    $body = New-Object System.Collections.Generic.List[string]
+    $body.Add('showmmr') | Out-Null
+    $body.Add('{') | Out-Null
+    foreach ($p in $parts) {
+        if ($p -match '^(\d+):\[(-?\d+),(-?\d+)\]$') {
+            $body.Add(("`t{0}`t`t`"{1},{2}`"" -f $matches[1], $matches[2], $matches[3])) | Out-Null
+        }
+    }
+    $body.Add('}') | Out-Null
+    $body = @($body)
     foreach ($d in $modDirs) {
         $dir = Join-Path $d 'cfg'
         [System.IO.Directory]::CreateDirectory($dir) | Out-Null

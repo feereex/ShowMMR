@@ -23,6 +23,7 @@ echo     3  purple   #A970FF          7  pink     #FF6FB5
 echo     4  blue     #4FA8FF          8  white    #FFFFFF
 echo.
 echo   A number, your own hex (with or without #), or 0 for the default.
+echo   Defaults: green wins, red losses, white text, Dota's own gold MMR block.
 echo.
 set "cw="
 set "cl="
