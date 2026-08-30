@@ -590,29 +590,75 @@ function Get-StartupLink {
     return (Join-Path ([Environment]::GetFolderPath('Startup')) 'ShowMMR sync.lnk')
 }
 
+# -----------------------------------------------------------------------------
+#  Truly windowless autostart.
+#
+#  powershell.exe is a CONSOLE program. -WindowStyle Hidden is applied by the
+#  host AFTER the console has already been allocated, so a shortcut pointing
+#  straight at it flashes a black window at every boot and leaves a console
+#  attached to the process that can be brought back up by accident.
+#
+#  wscript.exe is a GUI binary: it allocates no console at all, and Run with
+#  intWindowStyle 0 gives the child none either. So the shortcut points at
+#  wscript, wscript starts PowerShell, and nothing ever appears on screen.
+#
+#  The launcher lives in %LOCALAPPDATA%\ShowMMR2026 with the rest of the durable
+#  state - re-extracting the zip cannot wipe it, and it is not inside the game
+#  folder where it has no business being.
+# -----------------------------------------------------------------------------
+function Get-HiddenLauncher {
+    $dir = Join-Path $env:LOCALAPPDATA 'ShowMMR2026'
+    [System.IO.Directory]::CreateDirectory($dir) | Out-Null
+    return (Join-Path $dir 'showmmr_hidden.vbs')
+}
+
+function Write-HiddenLauncher($target) {
+    $vbs = Get-HiddenLauncher
+    $ps  = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
+    # in VBScript a doubled quote inside a string literal is one literal quote,
+    # which is why the paths below are wrapped in "" and not "
+    $lines = @(
+        "' ShowMMR 2026 - starts the history sync with no window at all.",
+        "' Written by showmmr_sync.ps1 -InstallStartup. Safe to delete by hand.",
+        'Dim sh',
+        'Set sh = CreateObject("WScript.Shell")',
+        ('sh.Run """' + $ps + '"" -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File ""' + $target + '"" -Watch", 0, False')
+    )
+    [System.IO.File]::WriteAllText($vbs, (($lines -join "`r`n") + "`r`n"), [System.Text.Encoding]::ASCII)
+    return $vbs
+}
+
 if ($RemoveStartup) {
     $startupLnk = Get-StartupLink
-    if (Test-Path $startupLnk) { Remove-Item $startupLnk -Force; Write-Host "  Removed $startupLnk" -ForegroundColor Green }
-    else { Write-Host '  Nothing to remove - autostart was not set up.' -ForegroundColor Yellow }
+    $removed = 0
+    if (Test-Path $startupLnk) { Remove-Item $startupLnk -Force; Write-Host "  Removed $startupLnk" -ForegroundColor Green; $removed++ }
+    $vbs = Get-HiddenLauncher
+    if (Test-Path $vbs) { Remove-Item $vbs -Force; Write-Host "  Removed $vbs" -ForegroundColor Green; $removed++ }
+    if ($removed -eq 0) { Write-Host '  Nothing to remove - autostart was not set up.' -ForegroundColor Yellow }
     return
 }
 
 if ($InstallStartup) {
     $startupLnk = Get-StartupLink
     $self = $MyInvocation.MyCommand.Path
+    $vbs  = Write-HiddenLauncher $self
+    $wscript = Join-Path $env:SystemRoot 'System32\wscript.exe'
+
     $sh = New-Object -ComObject WScript.Shell
     $lnk = $sh.CreateShortcut($startupLnk)
-    $lnk.TargetPath  = (Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe')
-    $lnk.Arguments   = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$self`" -Watch"
+    $lnk.TargetPath  = $wscript
+    $lnk.Arguments   = "`"$vbs`""
     $lnk.WorkingDirectory = (Split-Path $self -Parent)
+    $lnk.WindowStyle = 7          # minimised, in case the shell honours it first
     $lnk.Description = 'ShowMMR history sync'
     $lnk.Save()
+
     Write-Host ''
-    Write-Host '  Autostart installed - the sync now runs hidden with Windows.' -ForegroundColor Green
+    Write-Host '  Autostart installed - the sync runs with no window at all.' -ForegroundColor Green
     Write-Host "  $startupLnk"
+    Write-Host "  $vbs"
     Write-Host '  Starting it once now so you do not have to reboot.'
-    Start-Process -WindowStyle Hidden -FilePath $lnk.TargetPath `
-        -ArgumentList "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$self`" -Watch"
+    Start-Process -WindowStyle Hidden -FilePath $wscript -ArgumentList "`"$vbs`""
     Write-Host ''
     return
 }

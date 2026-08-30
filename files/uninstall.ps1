@@ -201,6 +201,12 @@ try {
             Write-Host '  removed the Windows startup entry' -ForegroundColor Green
         }
     }
+    # the windowless launcher the startup entry pointed at
+    $vbs = Join-Path $env:LOCALAPPDATA 'ShowMMR2026\showmmr_hidden.vbs'
+    if (Test-Path $vbs) {
+        Remove-Item $vbs -Force
+        Write-Host '  removed the hidden launcher' -ForegroundColor Green
+    }
 } catch { Write-Host "  could not check the startup folder: $_" -ForegroundColor Yellow }
 foreach ($p in (Get-Process powershell -ErrorAction SilentlyContinue)) {
     try {

@@ -3,15 +3,21 @@
 **Your MMR, back in the Dota 2 match history.**
 
 ```
-HERO PLAYED        RESULT          DATE / TIME          DURATION   TYPE
-[icon] t.me/feereeks   1489 (+40)   26-8-2026  17:37     56:19     Ranked
-[icon] t.me/feereeks   1449 (-26)   26-8-2026  16:55     34:48     Ranked
-[icon] t.me/feereeks   1475 (+40)   25-8-2026  21:19     47:43     Ranked
+HERO PLAYED       RESULT         DATE / TIME          DURATION   TYPE
+[icon] Lina       1489 (+40)     26-8-2026  17:37     56:19      Ranked
+[icon] Axe        1449 (-26)     26-8-2026  16:55     34:48      Ranked
+[icon] Crystal M. 1475 (+40)     25-8-2026  21:19     47:43      Ranked
+```
+
+```
+[avatar] [medal]  CRUSADER 3
+                  STAR  ▓▓▓▓▓▓▓░░░  143
+                  RANK  ▓▓▓░░░░░░░  451
 ```
 
 Valve took the numbers out. This puts them back — the rating after every ranked
-match and what it cost or earned you, plus a day-by-day strip above your
-profile.
+match and what it cost or earned you, how far you are from the next star and the
+next medal, plus a day-by-day strip above your profile.
 
 Built on [AveYo's ShowMMR](https://github.com/AveYo/ShowMMR) (2023), rebuilt
 from the ground up for the current client.
