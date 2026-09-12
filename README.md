@@ -15,37 +15,43 @@ HERO PLAYED       RESULT         DATE / TIME          DURATION   TYPE
                   RANK  ▓▓▓░░░░░░░  451
 ```
 
-Info about new builds: **[t.me/feereeks](https://t.me/feereeks)**
+New builds: **[t.me/feereeks](https://t.me/feereeks)**
 
 ## Install
 
-0. Install the matchmaking fix from [here](https://t.me/fanatimadkidadetishlux/56)
-1. Steam → right-click Dota 2 → Properties → Launch Options → add `-condebug`
-2. Close Dota 2
-3. Run `ShowMMR.exe` and follow the three steps
-4. Play a ranked match
+1. Close Dota 2
+2. Run `ShowMMR.exe` and click through the three steps
+3. Play a ranked game
 
-That's it. One file, nothing else to install. 
-Background sync is set up automatically.
+That's it. One file, nothing else to download, no fix to run first.
 
-The numbers only start from the match you play after installing. Older ones can
-be imported — **import matches** in the window says how.
+It installs into the language folder your Dota already loads, so nothing in the
+game gets edited. Launch options get written for you, and the sync that keeps
+your history is set up on the way.
 
-## If matchmaking stops working
+## How it works
 
-Just run the FixMatchMaking.bat from the archive you downloaded in step 0.
+You don't have to open anything yourself. After a ranked game it reads your
+rating off the post-game screen, saves it, and puts you back on the page you
+were on.
+
+The UI blinks for a split second when you start Dota, and once more after a
+match. That's it grabbing the page it needs. Most people don't catch it.
 
 ## Notes
 
-- After a Dota update Steam puts `gameinfo` back and the mod stops loading.
-  Just run FixMatchMaking.bat and install again — ten seconds, history untouched.
-- The first recorded match shows `(+0)`. There's nothing before it to compare against.
-- It asks for administrator rights because Dota often sits in `Program Files`.
-- Changing the client language won't affect the mod.
+- It only knows games you play after installing. Older ones can be imported —
+  **import matches** in the window tells you how.
+- The first game it records shows `(+0)`. There's nothing before it to compare
+  against.
+- A big Dota patch can break it. The client's layouts change and the mod is
+  built against them, so wait for a new build on the channel. Your history is
+  never touched either way.
+- It asks for admin rights because Dota usually sits in `Program Files`.
 
 ## License
 
-See [LICENSE.txt](LICENSE.txt). Personal use. Do not reupload the file — send
+See [LICENSE.txt](LICENSE.txt). Personal use. Don't reupload the file — send
 people to [t.me/feereeks](https://t.me/feereeks).
 
 Built on [AveYo's ShowMMR](https://github.com/AveYo/ShowMMR) (2023), MIT
