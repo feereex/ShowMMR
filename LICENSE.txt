@@ -1,5 +1,5 @@
 ================================================================================
-  ShowMMR 2026
+  ShowMMR
   END USER LICENSE AGREEMENT
 
   Copyright (c) 2026  t.me/feereeks.  All rights reserved.
@@ -24,7 +24,7 @@
   You may not:
 
     a) copy, publish, upload, mirror, share, lend, rent, sell, sublicense or
-       otherwise distribute the Software or any part of it, in original or
+       otherwise distribute the Software or any part of it, in
        modified form, by any means, including file hosts, forums, chats,
        torrents, game-mod sites and app stores;
 
@@ -36,9 +36,9 @@
        the extent that applicable law expressly permits this despite this
        restriction;
 
-    d) remove, hide, obscure, replace or alter the attribution mark
-       "t.me/feereeks" wherever it appears, this agreement, or any copyright
-       or authorship notice;
+    d) remove, hide, obscure, replace or alter the channel address
+       "t.me/feereeks" where it appears in this package, this agreement, or
+       any copyright or authorship notice;
 
     e) present the Software, or anything built from it, as your own work.
 
@@ -117,7 +117,7 @@
 
   9. UPDATES
   ----------------------------------------------------------------------------
-  Dota patches break client modifications. New builds are posted at:
+  Dota patches can break client modifications. New builds are posted at:
 
       t.me/feereeks
 
