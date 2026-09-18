@@ -1,5 +1,5 @@
 ================================================================================
-  ShowMMR
+  ShowMMR 2026
   END USER LICENSE AGREEMENT
 
   Copyright (c) 2026  t.me/feereeks.  All rights reserved.
@@ -12,24 +12,38 @@
 
   1. LICENSE GRANTED
   ----------------------------------------------------------------------------
-  You are granted a personal, non-exclusive, non-transferable, revocable
-  license to install and use the Software on computers you own or control,
-  for your own private, non-commercial use.
+  You are granted a personal, non-exclusive, revocable license to install and
+  use the Software on computers you own or control, for your own private,
+  non-commercial use.
 
-  That is the whole of the grant. Any use not written here is not permitted.
+  You may also pass the Software on to other people, free of charge, provided
+  that every one of these holds:
+
+    a) you pass on the complete, unmodified package - ShowMMR.exe, README.md
+       and LICENSE.txt together, exactly as you received them;
+
+    b) the channel t.me/feereeks is named as the source wherever you post
+       it, next to the file or the link;
+
+    c) you ask for nothing in return - no payment, no subscription, no
+       ad-gated or link-shortener paywall, no "like and subscribe" gate, no
+       bundling with anything paid;
+
+    d) you do not present the Software, or anything built from it, as your own
+       work.
+
+  Any use not written here is not permitted.
 
 
   2. WHAT YOU MAY NOT DO
   ----------------------------------------------------------------------------
   You may not:
 
-    a) copy, publish, upload, mirror, share, lend, rent, sell, sublicense or
-       otherwise distribute the Software or any part of it, in
-       modified form, by any means, including file hosts, forums, chats,
-       torrents, game-mod sites and app stores;
+    a) sell, rent, lend, sublicense or otherwise charge for the Software, or
+       put it behind any kind of paywall or required action;
 
-    b) bundle the Software with any other product, pack, cheat, launcher or
-       service, paid or free;
+    b) publish or share a modified, repacked, renamed or partial copy of it,
+       or bundle it with any other product, pack, cheat, launcher or service;
 
     c) modify, adapt, translate, decompile, disassemble or reverse engineer
        the Software, or create derivative works from it, except and only to
@@ -40,10 +54,10 @@
        "t.me/feereeks" where it appears in this package, this agreement, or
        any copyright or authorship notice;
 
-    e) present the Software, or anything built from it, as your own work.
+    e) claim authorship of the Software or of anything built from it.
 
-  If you want other people to have the Software, send them to t.me/feereeks.
-  That link is the only permitted way to pass it on.
+  The newest build is always at t.me/feereeks - sending people there is the
+  surest way to pass it on.
 
 
   3. OWNERSHIP
@@ -117,7 +131,7 @@
 
   9. UPDATES
   ----------------------------------------------------------------------------
-  Dota patches can break client modifications. New builds are posted at:
+  Dota patches break client modifications. New builds are posted at:
 
       t.me/feereeks
 
