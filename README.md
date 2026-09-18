@@ -15,6 +15,10 @@ HERO PLAYED       RESULT         DATE / TIME          DURATION   TYPE
                   RANK  ▓▓▓░░░░░░░  451
 ```
 
+Your colours on the numbers, a day-by-day strip above the profile, and effects
+if you want them - breathe, rainbow, fire, glitch, typewriter and more, with a
+live preview in the window.
+
 New builds: **[t.me/feereeks](https://t.me/feereeks)**
 
 ## Install
@@ -38,21 +42,29 @@ were on.
 The UI blinks for a split second when you start Dota, and once more after a
 match. That's it grabbing the page it needs. Most people don't catch it.
 
+Gameplay is not touched, the game's memory is never read, and nothing is sent
+anywhere. Client mods are still used at your own risk.
+
 ## Notes
 
-- It only knows games you play after installing. Older ones can be imported —
+- It only knows games you play after installing. Older ones can be imported -
   **import matches** in the window tells you how.
 - The first game it records shows `(+0)`. There's nothing before it to compare
   against.
+- Run `ShowMMR.exe` again any time to change colours or effects - your history
+  stays as it is.
 - A big Dota patch can break it. The client's layouts change and the mod is
   built against them, so wait for a new build on the channel. Your history is
   never touched either way.
 - It asks for admin rights because Dota usually sits in `Program Files`.
+- To remove it: right-click `uninstall.ps1` in
+  `%LOCALAPPDATA%\ShowMMR2026\app\files` and choose *Run with PowerShell*.
 
 ## License
 
-See [LICENSE.txt](LICENSE.txt). Personal use. Don't reupload the file — send
-people to [t.me/feereeks](https://t.me/feereeks).
+See [LICENSE.txt](LICENSE.txt). Free to pass on as long as you pass on the
+whole thing unchanged, ask nothing for it, and credit
+**[t.me/feereeks](https://t.me/feereeks)**.
 
 Built on [AveYo's ShowMMR](https://github.com/AveYo/ShowMMR) (2023), MIT
 licensed; that notice is reproduced in full in the license file.
